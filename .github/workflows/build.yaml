@@ -53,6 +53,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          fetch-tags: true
           ref: "${{ github.event.pull_request.head.sha }}"
       - run: |
           git fetch --prune --unshallow

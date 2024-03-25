@@ -16,6 +16,8 @@ jobs:
       TOOLKIT_REPO: ghcr.io/${{github.repository}}/elemental-cli 
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-tags: true
       - run: |
           git fetch --prune --unshallow
       - name: Log in to ghcr.io
